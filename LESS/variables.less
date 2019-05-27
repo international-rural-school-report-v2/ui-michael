@@ -2,27 +2,33 @@
 
 @import "https://fonts.googleapis.com/css?family=Anton|PT+Sans|Roboto:900&display=swap";
 
-@menu-bg: gold;
-@menu-color: black;
-@menu-highlight: brown;
+@primary: black;
+@text: white;
+@accent: #f8d445; // gold
+@hover: brown;
+
+@menu-bg: @accent;
+@menu-color: @primary;
+@menu-highlight: @hover;
 @menu-header: @menu-color;
 @menu-font: "Roboto";
 @menu-fontsize: 1.6rem;
 
-@header-color: white;
+@header-color: @text;
 @header-fontsize: 3rem;
 
-@button-bg: gold;
-@button-color: black;
-@button-hover: brown;
+@button-bg: @accent;
+@button-color: @primary;
+@button-hover: @hover;
 
-@page-bg: black;
-@page-color: white;
+@page-bg: @primary;
+@page-color: @text;
+@page-accent: @accent;
 @page-font: "PT Sans";
 @page-fontsize: 1.8rem;
 
-@footer-bg: black;
-@footer-color: white;
+@footer-bg: @primary;
+@footer-color: @text;
 @footer-font: "PT Sans";
 @footer-fontsize: 2rem;
 

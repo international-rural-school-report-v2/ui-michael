@@ -7,30 +7,18 @@
     display: flex;
     justify-content: center;
     align-items: center;
-
-    .header__image {
-      z-index: -1;
-      min-height: 100%;
-			min-width: 1024px;
-			width: 100%;
-			height: auto;
-			position: fixed;
-			top: 0;
-      left: 0;
-      opacity: 1;
-      transition: opacity .3s ease-in-out;
-
-      @media screen and (max-width: 1024px){
-        left: 50%;
-        margin-left: -512px;
-      }
-    }
+    background: url(../Assets/slide01.jpg) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    transition: background-image 1s ease;
 
     .header__content {
-      background: black;
+      background: @primary;
       width: 70%;
       max-width: 500px;
-      border: 10px solid gold;
+      border: 10px solid @accent;
       box-shadow: 0px 0px 2px black;
       padding: 25px;
       opacity: 0.8;

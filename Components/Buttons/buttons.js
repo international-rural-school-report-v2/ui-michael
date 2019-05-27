@@ -20,7 +20,7 @@ class Button extends Component {
     const overlay = document.querySelector('.overlay');
     overlay.style.display = 'block';
     setTimeout(() => { overlay.style.opacity = '1'; }, 100);
-    setTimeout(() => { document.location = 'https://irsr-frontend.netlify.com/'; }, 600);    
+    setTimeout(() => { document.location = 'https://irsr-frontend.netlify.com/'; }, 500);    
   }
 }
 

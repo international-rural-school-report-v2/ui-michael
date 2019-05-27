@@ -8,11 +8,17 @@ class Carousel extends Component {
     // Set some properties
     this.baseClass = 'header';
 
-    // Get list of images from empty component and populate the div with img nodes
-    this.carousel = this.getElement('image');
-    this.links = Array.from(this.carousel.dataset.images.split(','));
-    this.altTags = Array.from(this.carousel.dataset.alt.split(','));
+    // Get list of images from carousel component
+    this.carousel = this.getElement('container');
+    this.links = this.carousel.dataset.images.split(',');
+    
+    // Preload each image into the cache to improve initial transition
+    this.links.forEach(link => {
+      const img = new Image();
+      img.src = `../Assets/${link}`;
+    })
 
+    // Every five seconds, call cycle() to change the backgrond image
     window.setInterval(() => {
       this.cycle();
     }, 5000);
@@ -20,9 +26,7 @@ class Carousel extends Component {
 
   cycle() {
     this.links.push(this.links.shift());
-    this.carousel.src = `Assets/${this.links[0]}`;
-    this.altTags.push(this.altTags.shift());
-    this.carousel.alt = `Assets/${this.altTags[0]}`;
+    this.carousel.style.backgroundImage = `url('../Assets/${this.links[0]}')`;
   }
 }
 

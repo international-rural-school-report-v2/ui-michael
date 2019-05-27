@@ -3,7 +3,7 @@
 class Component {
   constructor(selector) {
     this.baseClass = 'component';
-    this.self = document.querySelector(selector);
+    this.self = document.querySelector(`.${selector}`);
   }
 
   getElement(element) {

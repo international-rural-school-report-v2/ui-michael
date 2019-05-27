@@ -10,10 +10,12 @@
   <script src="./Components/Base/base.js" defer></script>
   <script src="./Components/Menu/menu.js" defer></script>
   <script src="./Components/Carousel/carousel.js" defer></script>
+  <script src="./Components/Buttons/buttons.js" defer></script>
   <script src="./Components/Team/team.js" defer></script>
 </head>
 
 <body>
+  <div class="overlay"></div>
   <!-- Navigation -->
   <nav id="nav" class="nav" role="navigation" aria-label="Main navigation">
     <div class="nav__container">
@@ -50,7 +52,7 @@
         <p class="header__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
           incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
           laboris nisi ut aliquip ex ea commodo consequat.</p>
-        <a href="https://irsr-frontend.netlify.com/login"><button class="signup__button"b>Sign Up</button></a>
+        <a href="https://irsr-frontend.netlify.com/"><button class="header__button">Sign Up</button></a>
       </div>
 
     </div> <!-- .header__container -->
@@ -68,7 +70,7 @@
       </header>
 
       <!-- Content -->
-      <div class="about__content">
+      <div class="school about__content">
 
         <!-- Image -->
         <div class="about__image">
@@ -84,12 +86,12 @@
             consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
             pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
             est laborum.</p>
-            <a href="https://irsr-frontend.netlify.com/login"><button class="signup__button"b>Sign Up</button></a>
+            <a href="https://irsr-frontend.netlify.com/"><button class="school__button">Sign Up</button></a>
         </div>
       </div> <!-- .about__content -->
 
       <!-- Content -->
-      <div class="about__content">
+      <div class="schoolboard about__content">
 
         <!-- Image -->
         <div class="about__img">
@@ -105,7 +107,7 @@
             consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
             pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
             est laborum.</p>
-            <a href="https://irsr-frontend.netlify.com/login"><button class="signup__button"b>Sign Up</button></a>
+            <a href="https://irsr-frontend.netlify.com/"><button class="schoolboard__button">Sign Up</button></a>
         </div>
       </div> <!-- .about__content -->
 
@@ -126,7 +128,7 @@
           <textarea name="message" placeholder="Your message" tabindex="3" required></textarea>
         </fieldset>
         <fieldset class="contact__button">
-          <button type="submit" id="contact-submit" tabindex="4" data-submit="...Sending" role="button">Submit</button>
+          <button type="submit" id="contact-submit" class="contact__button" tabindex="4" data-submit="...Sending" role="button">Submit</button>
         </fieldset>
       </form>
 

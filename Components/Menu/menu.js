@@ -6,7 +6,7 @@ class BurgerMenu extends Component {
     super(selector);
 
     // Set some properties
-    this.baseClass = 'nav';
+    this.baseClass = selector;
     this.isOpen = false;
 
     // Cache burger element selector and get list of menu links
@@ -39,4 +39,4 @@ class BurgerMenu extends Component {
 }
 
 // Create BurgerMenu instance on document ready
-document.addEventListener('DOMContentLoaded', () => new BurgerMenu('#nav'));
+document.addEventListener('DOMContentLoaded', () => new BurgerMenu('nav'));

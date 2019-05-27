@@ -1,0 +1,26 @@
+
+button {
+  .font(@page-font, sans-serif; bold; normal; @page-fontsize);
+  .button-style(
+    100%, 50px, 10px 0, // Width, height, padding
+    none, 15px, // Border, border-radius
+    @button-bg, @button-color, @button-hover, // background-color, color, :hover color
+    2.2rem // font-size
+  );  
+  line-height: 2.4rem;
+  text-transform: uppercase;
+  user-select: none;
+}
+
+.overlay {
+  display: none;
+  background: gold;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 101;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}

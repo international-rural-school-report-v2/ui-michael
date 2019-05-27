@@ -26,5 +26,5 @@ class Carousel extends Component {
   }
 }
 
-// Create BurgerMenu instance on document ready
-document.addEventListener('DOMContentLoaded', () => new Carousel('#header'));
+// Create Carousel instance on document ready
+document.addEventListener('DOMContentLoaded', () => new Carousel('header'));

@@ -151,8 +151,7 @@ html {
   font-size: 62.5%;
   background: black;
 }
-p,
-button {
+p {
   color: white;
   font-family: "PT Sans", sans-serif;
   font-size: 1.8rem;
@@ -160,44 +159,10 @@ button {
   font-weight: bold;
   line-height: 2.4rem;
 }
-a,
-button {
+a {
+  text-transform: uppercase;
   user-select: none;
   transition: 0.3s;
-}
-button {
-  background-color: lightgray;
-  border: 2px solid black;
-  border-radius: 15px;
-  color: black;
-  font-size: 2.2rem;
-  height: 50px;
-  padding: 10px 0;
-  text-align: center;
-  width: 100%;
-  max-width: 500px;
-  text-transform: uppercase;
-}
-button:hover {
-  border: 2px solid black;
-  color: black;
-}
-.button--active {
-  background-color: gold;
-  border: 2px solid none;
-  border-radius: 15px;
-  color: black;
-  font-size: 2.2rem;
-  height: 50px;
-  padding: 10px 0;
-  text-align: center;
-  width: 100%;
-  max-width: 500px;
-  text-transform: uppercase;
-}
-.button--active:hover {
-  border: 2px solid brown;
-  color: brown;
 }
 .nav {
   background: gold;
@@ -362,4 +327,39 @@ button:hover {
 .header .header__container .header__content .header__text {
   color: white;
   margin: 20px 0;
+}
+button {
+  font-family: "PT Sans", sans-serif;
+  font-size: 1.8rem;
+  font-style: normal;
+  font-weight: bold;
+  background-color: gold;
+  border: 2px solid none;
+  border-radius: 15px;
+  color: black;
+  font-size: 2.2rem;
+  height: 50px;
+  padding: 10px 0;
+  text-align: center;
+  width: 100%;
+  max-width: 500px;
+  line-height: 2.4rem;
+  text-transform: uppercase;
+  user-select: none;
+}
+button:hover {
+  border: 2px solid brown;
+  color: brown;
+}
+.overlay {
+  display: none;
+  background: gold;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 101;
+  opacity: 0;
+  transition: opacity 0.5s ease;
 }

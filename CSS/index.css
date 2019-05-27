@@ -220,11 +220,11 @@ h3 {
   }
 }
 .nav .nav__container .nav__title-link {
-  color: rgba(0, 0, 0, 0.8);
   font-family: "Roboto", sans-serif;
   font-size: 3rem;
   font-style: normal;
   font-weight: bold;
+  color: rgba(0, 0, 0, 0.8);
   text-decoration: none;
 }
 .nav .nav__container .nav__title-link:hover,
@@ -265,6 +265,7 @@ h3 {
   display: none;
   font-size: 2.2rem;
   cursor: pointer;
+  color: rgba(0, 0, 0, 0.8);
 }
 @media screen and (max-width: 500px) {
   .nav .nav__container .nav__burger {
@@ -314,6 +315,11 @@ body {
   font-weight: bold;
   text-transform: uppercase;
   text-align: center;
+}
+@media screen and (max-width: 500px) {
+  .header .header__container .header__content .header__title {
+    font-size: 2rem;
+  }
 }
 .header .header__container .header__content .header__text {
   color: white;
@@ -563,7 +569,7 @@ button:hover {
   margin: 10px auto;
   text-align: center;
   text-transform: uppercase;
-  height: 45px;
+  height: 35px;
 }
 .team .team__role {
   color: #f8d445;

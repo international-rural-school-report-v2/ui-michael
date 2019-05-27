@@ -29,6 +29,10 @@ body {
         .font(@page-font, sans-serif; bold; normal; @header-fontsize; @header-color);
         text-transform: uppercase;
         text-align: center;
+        
+        @media @mobile {
+          font-size: 2rem;
+        }
       }
 
       .header__text {

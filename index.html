@@ -14,20 +14,17 @@
 </head>
 
 <body>
-  <!-- Main Navigation -->
+  <!-- Navigation -->
   <nav id="nav" class="nav" role="navigation" aria-label="Main navigation">
     <div class="nav__container">
 
       <!-- Title -->
       <h1 class="nav__title">
-        <a href="#" class="nav__title-link">International Rural School Report</a>
+        <a href="#" class="nav__title-link"><span class="nav__title--short">IRSR</span> <span class="nav__title--long">International Rural School Report</span></a>
       </h1>
 
       <!-- Nav List -->
       <ul class="nav__list" role="menubar">
-        <li class="nav__item">
-          <a href="#" class="nav__link">Home</a>
-        </li>
         <li class="nav__item">
           <a href="#" class="nav__link">About</a>
         </li>
@@ -48,29 +45,46 @@
     </div> <!-- nav__container -->
   </nav> <!-- .nav -->
 
+  <!-- Header -->
   <header id="header" class="header" role="banner">
     <div class="header__container">
+
+      <!-- Images -->
       <div class="header__images">
         <img class="header__image" src="./Assets/slide01.jpg" alt="Description 1"
           data-images="slide01.jpg,slide02.jpg,slide03.jpg" , data-alt="Description 1, Description 2, Description 3">
       </div>
+
+      <!-- Content -->
       <div class="header__content">
         <h2 class="header__title">International Rural School Report</h2>
         <p class="header__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
         <button class="header__button">Get Started</button>
       </div>
+
     </div> <!-- .header__container -->
   </header> <!-- .header -->
 
+  <!-- Main -->
   <main id="main" class="main" role="main">
+
+    <!-- About -->
     <section id="about" class="about">
+
+      <!-- Header -->
       <header class="about__header">
         <h2>About IRSR</h2>
       </header>
+
+      <!-- Content -->
       <div class="about__content">
-        <div class="about__img">
+
+        <!-- Image -->
+        <div class="about__image">
           <img src="Assets/forschools.jpg" alt="School">
         </div>
+
+        <!-- Text -->
         <div class="about__text">
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
             dolore
@@ -81,10 +95,16 @@
             est laborum.</p>
         </div>
       </div> <!-- .about__content -->
+
+      <!-- Content -->
       <div class="about__content">
+
+        <!-- Image -->
         <div class="about__img">
           <img src="Assets/forschoolboards.jpg" alt="Board Room">
         </div>
+
+        <!-- Text -->
         <div class="about__text">
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
             dolore
@@ -95,9 +115,13 @@
             est laborum.</p>
         </div>
       </div> <!-- .about__content -->
+      
     </section> <!-- .about -->
 
+    <!-- Contact -->
     <section id="contact" class="contact" role="form" aria-label="Contact information">
+
+      <!-- Form -->
       <form class="contact__form" method="post" action="https://formspree.io/fromthehart@pm.me">
         <fieldset class="contact__field">
           <input name="name" placeholder="Name" type="text" tabindex="1" required autofocus>
@@ -112,8 +136,10 @@
           <button type="submit" id="contact-submit" tabindex="4" data-submit="...Sending" role="button">Submit</button>
         </fieldset>
       </form>
+
     </section> <!-- .contact -->
 
+    <!-- Team -->
     <section id="" class="team">
       <div class="team__person" data-name="James Page" data-title="Team Lead"
         data-github="https://github.com/jamespagedev"></div>
@@ -129,6 +155,7 @@
 
   </main> <!-- .main -->
 
+  <!-- Footer -->
   <footer role="contentinfo">
     <small>Copyright &copy; 2019 IRSR, MIT License</small>
   </footer>

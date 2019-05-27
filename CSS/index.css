@@ -1,3 +1,10 @@
+@font-face {
+  font-family: 'PT Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('PT Sans'), local('PTSans-Regular'), url(https://fonts.gstatic.com/s/ptsans/v10/jizaRExUiTo99u79D0KEwA.ttf) format('truetype');
+}
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -128,4 +135,70 @@ table {
 }
 html {
   font-size: 62.5%;
+}
+p {
+  color: black;
+  font-family: "PT Sans", sans-serif;
+  font-size: 1.8rem;
+  font-style: normal;
+  font-weight: bold;
+}
+.nav {
+  background: black;
+  width: 100%;
+  opacity: 0.9;
+}
+.nav .nav__container {
+  margin: 0 auto;
+  max-width: 960px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60px;
+  padding: 10px 20px;
+}
+.nav .nav__container a,
+.nav .nav__container a:visited {
+  color: white;
+  font-family: "PT Sans", sans-serif;
+  font-size: 1.6rem;
+  font-style: normal;
+  font-weight: bold;
+  text-decoration: none;
+}
+.nav .nav__container .nav__title {
+  min-width: 15%;
+}
+.nav .nav__container .nav__title a,
+.nav .nav__container a:visited {
+  color: white;
+  font-family: "PT Sans", sans-serif;
+  font-size: 2.2rem;
+  font-style: normal;
+  font-weight: bold;
+}
+.nav .nav__container .nav__title--long {
+  display: inline-block;
+}
+@media screen and (max-width: 800px) {
+  .nav .nav__container .nav__title--long {
+    display: none;
+  }
+}
+.nav .nav__container .nav__title--short {
+  display: none;
+}
+@media screen and (max-width: 800px) {
+  .nav .nav__container .nav__title--short {
+    display: inline-block;
+  }
+}
+.nav .nav__container .nav__list {
+  display: flex;
+  justify-content: space-around;
+  min-width: 70%;
+}
+.nav .nav__container .nav__burger {
+  display: none;
+  cursor: pointer;
 }

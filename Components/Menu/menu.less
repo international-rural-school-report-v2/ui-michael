@@ -1,0 +1,56 @@
+// Navigation menu styling
+
+.nav {
+  background: @menu-bg;
+  width: 100%;
+  opacity: 0.9;
+
+  .nav__container {
+    margin: 0 auto;
+    max-width: 960px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+    padding: 10px 20px;
+
+    a,
+    a:visited {
+      .font("PT Sans", sans-serif; bold; normal; 1.6rem; white);
+      text-decoration: none;
+    }
+
+    .nav__title {
+      min-width: 15%;
+    }
+
+    .nav__title a,
+    a:visited {
+      .font("PT Sans", sans-serif; bold; normal; 2.2rem; white);
+    }
+
+    .nav__title--long {
+      display: inline-block;
+      @media @tablet {
+        display: none;
+      }
+    }
+    .nav__title--short {
+      display: none;
+      @media @tablet {
+        display: inline-block;
+      }
+    }
+
+    .nav__list {
+      display: flex;
+      justify-content: space-around;
+      min-width: 70%;
+    }
+
+    .nav__burger {
+      display: none;
+      cursor: pointer;
+    }
+  }
+}

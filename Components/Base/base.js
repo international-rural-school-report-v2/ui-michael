@@ -22,3 +22,10 @@ class Component {
     this.self.classList.remove(`${this.baseClass}--${modifier}`);
   }
 }
+
+window.addEventListener('load', () => {
+  if ('scrollRestoration' in history) {
+    history.scrollRestoration = 'manual';
+  }
+  window.scrollTo(0,0);
+});

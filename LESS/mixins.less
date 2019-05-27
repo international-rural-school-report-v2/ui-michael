@@ -7,3 +7,25 @@
   font-style: @fontStyle;
   font-weight: @fontWeight;
 }
+
+.button-style(@btnWidth: 100%, @btnHeight: 50px, @btnPadding: 0 5px,
+               @btnBorder: none, @btnBorderRadius: 0,
+               @btnBgColor: @white, @btnTextColor: @black, @btnHoverColor: @black,
+               @btnFontSize: 1.6rem) {
+  background-color: @btnBgColor;
+  border: 2px solid @btnBorder;
+  border-radius: @btnBorderRadius;
+  color: @btnTextColor;
+  font-size: @btnFontSize;
+  height: @btnHeight;
+  padding: @btnPadding;
+  text-align: center;
+  width: @btnWidth;
+  max-width: 500px;
+  text-transform: uppercase;
+
+  &:hover {
+    border: 2px solid @btnHoverColor;
+    color: @btnHoverColor;
+  }
+}

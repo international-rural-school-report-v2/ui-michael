@@ -2,8 +2,34 @@
 
 html {
   font-size: 62.5%;
+  background: @page-bg;
 }
 
-p {
-  .font("PT Sans", sans-serif; bold; normal; 1.8rem);
+p, button {
+  .font(@page-font, sans-serif; bold; normal; @page-fontsize; @page-color);
+  line-height: 2.4rem;
+}
+
+a, button {
+  user-select: none;
+  transition: 0.3s;
+}
+
+button {
+  .button-style(
+    100%, 50px, 10px 0, // Width, height, padding
+    @button-color, 15px, // Border, border-radius
+    lightgray, @button-color, @button-color, // background-color, color, :hover color
+    2.2rem // font-size
+  );
+  text-transform: uppercase;
+}
+
+.button--active {
+  .button-style(
+    100%, 50px, 10px 0, // Width, height, padding
+    none, 15px, // Border, border-radius
+    @button-bg, @button-color, @button-hover, // background-color, color, :hover color
+    2.2rem // font-size
+  );
 }

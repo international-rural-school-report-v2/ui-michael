@@ -16,9 +16,7 @@ class BurgerMenu extends Component {
 
     // Bind events
     this.burger.addEventListener('click', e => this.toggle(e));
-    this.burger.addEventListener('touchend', e => this.toggle(e));
     this.links.forEach(link => link.addEventListener('click', e => this.close(e)));
-    this.links.forEach(link => link.addEventListener('touchend', e => this.close(e)));
   }
 
   toggle(event) {

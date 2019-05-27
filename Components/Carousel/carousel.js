@@ -6,14 +6,13 @@ class Carousel extends Component {
     super(selector);
 
     // Set some properties
-    this.baseClass = 'header';
+    this.baseClass = 'body';
 
     // Get list of images from carousel component
-    this.carousel = this.getElement('container');
-    this.links = this.carousel.dataset.images.split(',');
+    this.carousel = document.body.dataset.carouselImages.split(',');
     
     // Preload each image into the cache to improve initial transition
-    this.links.forEach(link => {
+    this.carousel.forEach(link => {
       const img = new Image();
       img.src = `../Assets/${link}`;
     })
@@ -25,10 +24,10 @@ class Carousel extends Component {
   }
 
   cycle() {
-    this.links.push(this.links.shift());
-    this.carousel.style.backgroundImage = `url('../Assets/${this.links[0]}')`;
+    this.carousel.push(this.carousel.shift());
+    document.body.style.backgroundImage = `url('../Assets/${this.carousel[0]}')`;
   }
 }
 
 // Create Carousel instance on document ready
-document.addEventListener('DOMContentLoaded', () => new Carousel('header'));
+document.addEventListener('DOMContentLoaded', () => new Carousel('body'));

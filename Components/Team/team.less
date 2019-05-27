@@ -1,0 +1,68 @@
+.team {
+  .flex(@flow: row wrap);
+  color: @text;
+  border-top: 10px solid @accent;
+  border-bottom: 10px solid @accent;
+  box-shadow: 0px 0px 2px black;
+  padding: 25px;
+  width: 100%;
+  margin-bottom: 75px;
+  background: @primary;
+  margin-bottom: 75px;
+
+  h3 {
+    .font(@page-font, sans-serif; bold; normal; 2rem; @page-color);
+    margin: 10px auto;
+    text-align: center;
+    text-transform: uppercase;
+    height: 45px;
+  }
+
+  .team__role {
+    color: @accent;
+  }
+
+  p {
+    color: @page-color;
+    margin: 5px auto;
+    width: 100%;
+    max-width: 450px;
+    text-align: center;
+  }
+
+  a {
+    color: @page-color;
+
+    &:hover {
+      color: @hover;
+    }
+  }
+
+  @media @mobile {
+    flex-direction: column;
+  }
+
+  .team__member {
+    width: 15%;
+    margin: 20px 2%;
+    height: auto;
+    min-height: 300px;
+
+    @media @tablet {
+      width: 40%;
+      padding: 0;
+      margin: 25px auto;
+    }
+
+    @media @mobile {
+      width: 85%;
+    }
+
+    img {
+      width: 100%;
+      height: auto;
+      vertical-align: center;
+      border: 2px solid @accent;
+    }
+  }
+}

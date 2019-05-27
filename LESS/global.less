@@ -1,18 +1,22 @@
 // Global styling
 
+* {
+  box-sizing: border-box;
+}
 html {
   font-size: 62.5%;
-  background: @page-bg;
   scroll-behavior: smooth;
 }
 
 p {
   .font(@page-font, sans-serif; bold; normal; @page-fontsize; @page-color);
   line-height: 2.4rem;
+  margin-bottom: 20px;
 }
 
 a {
   text-transform: uppercase;
+  text-decoration: none;
   user-select: none;
   transition: 0.3s;
 }

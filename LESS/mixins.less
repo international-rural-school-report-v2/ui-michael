@@ -1,5 +1,13 @@
 // Mixin declarations
 
+.flex(@justify: center, @flow: initial, @align-itm: center, @align-con: center) {
+  display: flex;
+  justify-content: @justify;
+  flex-flow: @flow;
+  align-items: @align-itm;
+  align-content: @align-con;
+}
+
 .font(@fontFamily: Arial, sans-serif; @fontWeight: normal; @fontStyle: normal; @fontSize: 1.6rem; @fontColor: black) {
   color: @fontColor;
   font-family: @fontFamily;
@@ -16,6 +24,7 @@
   border: 2px solid @btnBorder;
   border-radius: @btnBorderRadius;
   color: @btnTextColor;
+  display: block;
   font-size: @btnFontSize;
   height: @btnHeight;
   padding: @btnPadding;
@@ -23,6 +32,7 @@
   width: @btnWidth;
   max-width: 500px;
   text-transform: uppercase;
+  margin: 0 auto;
 
   &:hover {
     border: 2px solid @btnHoverColor;

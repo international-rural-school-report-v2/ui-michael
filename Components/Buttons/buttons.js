@@ -10,7 +10,6 @@ class Button extends Component {
 
     // Add click handler to each button that fades to menu color and then loads the front end
     this.link = this.getElement('button');
-
     this.link.addEventListener('click', e => this.close(e));
     this.link.addEventListener('touchend', e => this.close(e));    
   }

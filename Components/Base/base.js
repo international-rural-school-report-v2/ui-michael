@@ -23,9 +23,12 @@ class Component {
   }
 }
 
+// Fix starting scroll location to top of page if no hash fragment found
 window.addEventListener('load', () => {
-  if ('scrollRestoration' in history) {
-    history.scrollRestoration = 'manual';
+  if (!window.location.hash) {
+    if ('scrollRestoration' in history) {
+      history.scrollRestoration = 'manual';
+    }
+    window.scrollTo(0,0);
   }
-  window.scrollTo(0,0);
 });

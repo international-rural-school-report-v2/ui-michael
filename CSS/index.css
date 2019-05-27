@@ -1,11 +1,4 @@
 @font-face {
-  font-family: 'Anton';
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: local('Anton Regular'), local('Anton-Regular'), url(https://fonts.gstatic.com/s/anton/v10/1Ptgg87LROyAm3Kz-Co.ttf) format('truetype');
-}
-@font-face {
   font-family: 'PT Sans';
   font-style: normal;
   font-weight: 400;
@@ -147,9 +140,11 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
+* {
+  box-sizing: border-box;
+}
 html {
   font-size: 62.5%;
-  background: black;
   scroll-behavior: smooth;
 }
 p {
@@ -159,9 +154,11 @@ p {
   font-style: normal;
   font-weight: bold;
   line-height: 2.4rem;
+  margin-bottom: 20px;
 }
 a {
   text-transform: uppercase;
+  text-decoration: none;
   user-select: none;
   transition: 0.3s;
 }
@@ -182,11 +179,11 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 50px;
+  height: 70px;
   padding: 10px 20px;
 }
 .nav .nav__container .nav__link {
-  color: black;
+  color: rgba(0, 0, 0, 0.8);
   font-family: "Roboto", sans-serif;
   font-size: 1.6rem;
   font-style: normal;
@@ -218,7 +215,7 @@ a {
   }
 }
 .nav .nav__container .nav__title-link {
-  color: black;
+  color: rgba(0, 0, 0, 0.8);
   font-family: "Roboto", sans-serif;
   font-size: 3rem;
   font-style: normal;
@@ -271,7 +268,7 @@ a {
   }
 }
 .nav .nav__container .nav__burger:visited {
-  color: black;
+  color: rgba(0, 0, 0, 0.8);
 }
 @media screen and (max-width: 500px) {
   .nav--opened .nav__container .nav__list {
@@ -280,13 +277,7 @@ a {
     transition: opacity 300ms ease-out;
   }
 }
-.header .header__container {
-  width: 100%;
-  height: 100vh;
-  overflow: hidden;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+body {
   background: url(../Assets/slide01.jpg) no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -294,14 +285,21 @@ a {
   background-size: cover;
   transition: background-image 1s ease;
 }
+.header .header__container {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .header .header__container .header__content {
-  background: black;
+  background: rgba(0, 0, 0, 0.8);
   width: 70%;
   max-width: 500px;
   border: 10px solid #f8d445;
   box-shadow: 0px 0px 2px black;
   padding: 25px;
-  opacity: 0.8;
 }
 .header .header__container .header__content .header__title {
   color: white;
@@ -309,7 +307,6 @@ a {
   font-size: 3rem;
   font-style: normal;
   font-weight: bold;
-  font-size: 4rem;
   text-transform: uppercase;
   text-align: center;
 }
@@ -318,6 +315,7 @@ a {
   margin: 20px 0;
 }
 button {
+  color: black;
   font-family: "PT Sans", sans-serif;
   font-size: 1.8rem;
   font-style: normal;
@@ -325,13 +323,15 @@ button {
   background-color: #f8d445;
   border: 2px solid none;
   border-radius: 15px;
-  color: black;
+  color: rgba(0, 0, 0, 0.8);
+  display: block;
   font-size: 2.2rem;
   height: 50px;
   padding: 10px 0;
   text-align: center;
   width: 100%;
   max-width: 500px;
+  margin: 0 auto;
   line-height: 2.4rem;
   text-transform: uppercase;
   user-select: none;
@@ -351,4 +351,190 @@ button:hover {
   z-index: 101;
   opacity: 0;
   transition: opacity 0.5s ease;
+}
+.about {
+  color: white;
+}
+.about .about__header {
+  border-top: 10px solid #f8d445;
+  border-bottom: 10px solid #f8d445;
+  box-shadow: 0px 0px 2px black;
+  padding: 25px;
+  width: 100%;
+  margin-bottom: 75px;
+  background: rgba(0, 0, 0, 0.8);
+}
+.about .about__header h2 {
+  color: white;
+  font-family: "PT Sans", sans-serif;
+  font-size: 3rem;
+  font-style: normal;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: center;
+}
+.about .about__header p {
+  margin: 25px auto 0;
+  width: 100%;
+  max-width: 450px;
+}
+.about .about__content {
+  display: flex;
+  justify-content: center;
+  flex-flow: row wrap;
+  align-items: center;
+  align-content: center;
+  background: rgba(0, 0, 0, 0.8);
+  border-top: 10px solid #f8d445;
+  border-bottom: 10px solid #f8d445;
+  padding: 30px 40px;
+  margin-bottom: 75px;
+}
+@media screen and (max-width: 800px) {
+  .about .about__content {
+    flex-direction: column;
+  }
+}
+.about .about__content .about__image {
+  display: inline-block;
+  width: 45%;
+  margin-right: 5%;
+  height: auto;
+  align-self: center;
+  border: 2px solid #f8d445;
+}
+@media screen and (max-width: 800px) {
+  .about .about__content .about__image {
+    width: 100%;
+    padding: 0;
+    margin: 0 auto;
+  }
+}
+.about .about__content .about__image img {
+  width: 100%;
+  height: auto;
+  vertical-align: center;
+}
+.about .about__content .about__text {
+  display: inline-block;
+  width: 50%;
+  padding: 30px;
+}
+@media screen and (max-width: 800px) {
+  .about .about__content .about__text {
+    width: 100%;
+    padding: 30px 0;
+  }
+}
+.about .about__content .about__text h3 {
+  color: white;
+  font-family: "PT Sans", sans-serif;
+  font-size: 2.5rem;
+  font-style: normal;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 30px;
+}
+.about .about__content--reverse {
+  flex-direction: row-reverse;
+}
+@media screen and (max-width: 800px) {
+  .about .about__content--reverse {
+    flex-direction: column;
+  }
+}
+.about .about__content--reverse .about__image {
+  margin-left: 5%;
+  margin-right: 0;
+}
+@media screen and (max-width: 800px) {
+  .about .about__content--reverse .about__image {
+    margin: 0;
+    width: 100%;
+    padding: 0;
+    margin: 0 auto;
+  }
+}
+.about .about__content--reverse .about__text {
+  display: inline-block;
+  width: 50%;
+  padding: 30px;
+}
+@media screen and (max-width: 800px) {
+  .about .about__content--reverse .about__text {
+    width: 100%;
+    padding: 30px 0;
+  }
+}
+.team {
+  display: flex;
+  justify-content: center;
+  flex-flow: row wrap;
+  align-items: center;
+  align-content: center;
+  color: white;
+  border-top: 10px solid #f8d445;
+  border-bottom: 10px solid #f8d445;
+  box-shadow: 0px 0px 2px black;
+  padding: 25px;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  margin-bottom: 75px;
+}
+.team h3 {
+  color: white;
+  font-family: "PT Sans", sans-serif;
+  font-size: 2rem;
+  font-style: normal;
+  font-weight: bold;
+  margin: 10px auto;
+  text-align: center;
+  text-transform: uppercase;
+  height: 45px;
+}
+.team .team__role {
+  color: #f8d445;
+}
+.team p {
+  color: white;
+  margin: 5px auto;
+  width: 100%;
+  max-width: 450px;
+  text-align: center;
+}
+.team a {
+  color: white;
+}
+.team a:hover {
+  color: brown;
+}
+@media screen and (max-width: 500px) {
+  .team {
+    flex-direction: column;
+  }
+}
+.team .team__member {
+  width: 15%;
+  margin: 20px 2%;
+  height: auto;
+  min-height: 300px;
+}
+@media screen and (max-width: 800px) {
+  .team .team__member {
+    width: 40%;
+    padding: 0;
+    margin: 25px auto;
+  }
+}
+@media screen and (max-width: 500px) {
+  .team .team__member {
+    width: 85%;
+  }
+}
+.team .team__member img {
+  width: 100%;
+  height: auto;
+  vertical-align: center;
+  border: 2px solid #f8d445;
 }

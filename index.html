@@ -14,7 +14,7 @@
   <script src="./Components/Team/team.js" defer></script>
 </head>
 
-<body>
+<body data-carousel-images="slide01.jpg,slide02.jpg,slide03.jpg">
   <div class="overlay"></div>
   <!-- Navigation -->
   <nav id="nav" class="nav" role="navigation" aria-label="Main navigation">
@@ -30,7 +30,8 @@
         <a href="#about" class="nav__link">About</a>
         <a href="#contact" class="nav__link">Contact</a>
         <a href="#team" class="nav__link">Team</a>
-        <a href="https://irsr-frontend.netlify.com/" id="frontend" class="nav__link">Login / Sign Up</a>
+        <a href="https://irsr-frontend.netlify.com/" class="nav__link"
+          onclick="document.querySelector('button').click(); return false">Login / Sign Up</a>
       </div>
 
       <!-- Burger -->
@@ -41,14 +42,13 @@
 
   <!-- Header -->
   <header id="header" class="header" role="banner">
-    <div class="header__container" data-images="slide01.jpg,slide02.jpg,slide03.jpg">
+    <div class="header__container">
 
       <!-- Content -->
       <div class="header__content">
         <h1 class="header__title">International Rural School Report</h1>
-        <p class="header__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-          incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-          laboris nisi ut aliquip ex ea commodo consequat.</p>
+        <p class="header__text">The premier equipment and issue tracking tool for schools around the world, enabling
+          rapid communication and resolution of needs with partner school boards.</p>
         <a href="https://irsr-frontend.netlify.com/"><button class="header__button">Sign Up</button></a>
       </div>
 
@@ -63,7 +63,8 @@
 
       <!-- Header -->
       <header class="about__header">
-        <h2><a About IRSR</h2>
+        <h2>About IRSR</h2>
+        <p>Our mission is to provide a reliable tool for school admins and board members to effectively communicate and resolve school issues. With the ability to track and schedule issues and their status, this application will provide a great mainstream workflow to benefit not just the board members and school admins, but the students too.</p>
       </header>
 
       <!-- Content -->
@@ -71,32 +72,31 @@
 
         <!-- Image -->
         <div class="about__image">
-          <img src="Assets/forschools.jpg" alt="School">
+          <img src="Assets/supplies.jpg" alt="Pens, pencils, paper and other school supplies">
         </div>
 
         <!-- Text -->
         <div class="about__text">
+            <h3>IRSR for School Admins</h3>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
             dolore
             magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-            commodo
-            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
-            est laborum.</p>
-            <a href="https://irsr-frontend.netlify.com/"><button class="school__button">Sign Up</button></a>
+            commodo.</p>
+          <a href="https://irsr-frontend.netlify.com/"><button class="school__button">Sign Up</button></a>
         </div>
       </div> <!-- .about__content -->
 
       <!-- Content -->
-      <div class="schoolboard about__content">
+      <div class="schoolboard about__content about__content--reverse">
 
         <!-- Image -->
-        <div class="about__img">
-          <img src="Assets/forschoolboards.jpg" alt="Board Room">
+        <div class="about__image">
+          <img src="Assets/schoolboard.jpg" alt="School">
         </div>
 
         <!-- Text -->
         <div class="about__text">
+          <h3>IRSR for School Boards</h3>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
             dolore
             magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
@@ -104,7 +104,7 @@
             consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
             pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
             est laborum.</p>
-            <a href="https://irsr-frontend.netlify.com/"><button class="schoolboard__button">Sign Up</button></a>
+          <a href="https://irsr-frontend.netlify.com/"><button class="schoolboard__button">Sign Up</button></a>
         </div>
       </div> <!-- .about__content -->
 
@@ -125,7 +125,8 @@
           <textarea name="message" placeholder="Your message" tabindex="3" required></textarea>
         </fieldset>
         <fieldset class="contact__button">
-          <button type="submit" id="contact-submit" class="contact__button" tabindex="4" data-submit="...Sending" role="button">Submit</button>
+          <button type="submit" id="contact-submit" class="contact__button" tabindex="4" data-submit="...Sending"
+            role="button">Submit</button>
         </fieldset>
       </form>
 
@@ -133,16 +134,16 @@
 
     <!-- Team -->
     <section id="team" class="team">
-      <div class="team__person" data-name="James Page" data-title="Team Lead"
-        data-github="https://github.com/jamespagedev"></div>
-      <div class="team__person" data-name="Kenneth Ridenour" data-title="Front-End Architect"
-        data-github="https://github.com/ken1286"></div>
-      <div class="team__person" data-name="Matt Poloni" data-title="Back-End Architect"
-        data-github="https://github.com/matt-poloni"></div>
-      <div class="team__person" data-name="Mohammad Tourjoman" data-title="Web UI Developer"
-        data-github="https://github.com/mtourj"></div>
-      <div class="team__person" data-name="Michael Hart" data-title="Web UI Developer"
-        data-github="https://github.com/fromthehart"></div>
+      <div class="team__member" data-name="James Page" data-title="Team Lead"
+        data-github="https://github.com/jamespagedev" data-photo="Assets/james.jpg"></div>
+      <div class="team__member" data-name="Kenneth Ridenour" data-title="Front-End Architect"
+        data-github="https://github.com/ken1286" data-photo="Assets/ken.jpg"></div>
+      <div class="team__member" data-name="Matt Poloni" data-title="Back-End Architect"
+        data-github="https://github.com/matt-poloni" data-photo="Assets/matt.jpg"></div>
+      <div class="team__member" data-name="Mohammad Tourjoman" data-title="Web UI Developer"
+        data-github="https://github.com/mtourj" data-photo="Assets/mohammad.jpg"></div>
+      <div class="team__member" data-name="Michael Hart" data-title="Web UI Developer"
+        data-github="https://github.com/fromthehart" data-photo="Assets/michael.jpg"></div>
     </section> <!-- .team -->
 
   </main> <!-- .main -->

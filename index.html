@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>International Rural School Report</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" media="screen" href="./CSS/index.css" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+    integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+  <script src="./Components/Base/base.js" defer></script>
+  <script src="./Components/Menu/menu.js" defer></script>
+  <script src="./Components/Carousel/carousel.js" defer></script>
+  <script src="./Components/Team/team.js" defer></script>
+</head>
+
+<body>
+  <!-- Main Navigation -->
+  <nav id="nav" class="nav" role="navigation" aria-label="Main navigation">
+    <div class="nav__container">
+
+      <!-- Title -->
+      <h1 class="nav__title">
+        <a href="#" class="nav__title-link">International Rural School Report</a>
+      </h1>
+
+      <!-- Nav List -->
+      <ul class="nav__list" role="menubar">
+        <li class="nav__item">
+          <a href="#" class="nav__link">Home</a>
+        </li>
+        <li class="nav__item">
+          <a href="#" class="nav__link">About</a>
+        </li>
+        <li class="nav__item">
+          <a href="#" class="nav__link">Contact</a>
+        </li>
+        <li class="nav__item">
+          <a href="#" class="nav__link">Team</a>
+        </li>
+        <li class="nav__item">
+          <a href="#" class="nav__link">Login / Sign Up</a>
+        </li>
+      </ul>
+
+      <!-- Burger -->
+      <a href="#" class="nav__burger" role="button" aria-label="Open / close menu"><span class="fas fa-bars"></span></a>
+
+    </div> <!-- nav__container -->
+  </nav> <!-- .nav -->
+
+  <header id="header" class="header" role="banner">
+    <div class="header__container">
+      <div class="header__images">
+        <img class="header__image" src="./Assets/slide01.jpg" alt="Description 1"
+          data-images="slide01.jpg,slide02.jpg,slide03.jpg" , data-alt="Description 1, Description 2, Description 3">
+      </div>
+      <div class="header__content">
+        <h2 class="header__title">International Rural School Report</h2>
+        <p class="header__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        <button class="header__button">Get Started</button>
+      </div>
+    </div> <!-- .header__container -->
+  </header> <!-- .header -->
+
+  <main id="main" class="main" role="main">
+    <section id="about" class="about">
+      <header class="about__header">
+        <h2>About IRSR</h2>
+      </header>
+      <div class="about__content">
+        <div class="about__img">
+          <img src="Assets/forschools.jpg" alt="School">
+        </div>
+        <div class="about__text">
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+            dolore
+            magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+            commodo
+            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
+            est laborum.</p>
+        </div>
+      </div> <!-- .about__content -->
+      <div class="about__content">
+        <div class="about__img">
+          <img src="Assets/forschoolboards.jpg" alt="Board Room">
+        </div>
+        <div class="about__text">
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+            dolore
+            magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+            commodo
+            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
+            est laborum.</p>
+        </div>
+      </div> <!-- .about__content -->
+    </section> <!-- .about -->
+
+    <section id="contact" class="contact" role="form" aria-label="Contact information">
+      <form class="contact__form" method="post" action="https://formspree.io/fromthehart@pm.me">
+        <fieldset class="contact__field">
+          <input name="name" placeholder="Name" type="text" tabindex="1" required autofocus>
+        </fieldset>
+        <fieldset class="contact__field">
+          <input name="email" placeholder="E-mail" type="email" tabindex="2" required>
+        </fieldset>
+        <fieldset class="contact__field">
+          <textarea name="message" placeholder="Your message" tabindex="3" required></textarea>
+        </fieldset>
+        <fieldset class="contact__button">
+          <button type="submit" id="contact-submit" tabindex="4" data-submit="...Sending" role="button">Submit</button>
+        </fieldset>
+      </form>
+    </section> <!-- .contact -->
+
+    <section id="" class="team">
+      <div class="team__person" data-name="James Page" data-title="Team Lead"
+        data-github="https://github.com/jamespagedev"></div>
+      <div class="team__person" data-name="Kenneth Ridenour" data-title="Front-End Architect"
+        data-github="https://github.com/ken1286"></div>
+      <div class="team__person" data-name="Matt Poloni" data-title="Back-End Architect"
+        data-github="https://github.com/matt-poloni"></div>
+      <div class="team__person" data-name="Mohammad Tourjoman" data-title="Web UI Developer"
+        data-github="https://github.com/mtourj"></div>
+      <div class="team__person" data-name="Michael Hart" data-title="Web UI Developer"
+        data-github="https://github.com/fromthehart"></div>
+    </section> <!-- .team -->
+
+  </main> <!-- .main -->
+
+  <footer role="contentinfo">
+    <small>Copyright &copy; 2019 IRSR, MIT License</small>
+  </footer>
+</body>
+
+</html>

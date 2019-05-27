@@ -1,0 +1,50 @@
+
+.contact {
+  border-top: 10px solid @accent;
+  border-bottom: 10px solid @accent;
+  box-shadow: 0px 0px 2px black;
+  padding: 25px;
+  width: 100%;
+  margin-bottom: 75px;
+  background: @primary;
+
+  h2 {
+    .font(@page-font, sans-serif; bold; normal; 3rem; @page-color);
+    text-transform: uppercase;
+    text-align: center;
+    padding: 25px;
+  }
+
+  h2, form {
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+
+  fieldset {
+    width: 100%;
+  }
+  
+  input[type="text"],
+  input[type="email"],
+  input[type="tel"],
+  input[type="url"],
+  select,
+  textarea {
+    width: 100%;
+    background: white;
+    margin: 10px 0 5px;
+    padding: 10px;
+    font-size: 1.6rem;
+  }
+
+  select {
+    height: 50px;
+    color: black;
+  }
+
+  textarea {
+    height: 100px;
+    margin-bottom: 25px;
+  }
+}

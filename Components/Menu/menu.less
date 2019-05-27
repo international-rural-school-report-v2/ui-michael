@@ -2,6 +2,9 @@
 
 .nav {
   background: @menu-bg;
+  position: fixed;
+  left: 0;
+  top: 0;
   width: 100%;
   opacity: 0.9;
 
@@ -11,34 +14,54 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 60px;
+    height: 50px;
     padding: 10px 20px;
 
-    a,
-    a:visited {
-      .font("PT Sans", sans-serif; bold; normal; 1.6rem; white);
+    .nav__link {
+      .font("PT Sans", sans-serif; 800; normal; 1.8rem; lightgray);
       text-decoration: none;
+      &:hover, &:active {
+        color: dodgerblue;
+      }
+      @media @mobile {
+        font-size: 4vh;
+        line-height: 20vh;
+      }
     }
 
     .nav__title {
       min-width: 15%;
+      @media @mobile {
+        width: 95%;
+        text-align: left;
+      }
     }
 
-    .nav__title a,
-    a:visited {
+    .nav__title-link {
       .font("PT Sans", sans-serif; bold; normal; 2.2rem; white);
+      line-height: 2.6rem;
+      text-decoration: none;
+      &:hover, &:active {
+        color: dodgerblue;
+      }
     }
 
     .nav__title--long {
-      display: inline-block;
+      display: block;
       @media @tablet {
         display: none;
+      }
+      @media @mobile {
+        display: block;
       }
     }
     .nav__title--short {
       display: none;
       @media @tablet {
-        display: inline-block;
+        display: block;
+      }
+      @media @mobile {
+        display: none;
       }
     }
 
@@ -46,11 +69,44 @@
       display: flex;
       justify-content: space-around;
       min-width: 70%;
+      @media @mobile {
+        flex-direction: column;
+        justify-content: flex-start;
+        text-align: center;
+        position: absolute;
+        left: 0;
+        top: 70px;
+        width: 100%;
+        height: 0;
+        padding: 0 0 20px 0;
+        margin: 0;
+        background-color: black;
+        list-style: none;
+        opacity: 0;
+        overflow: hidden;
+        transition: opacity 300ms ease-out, height 0ms linear 300ms;
+      }
     }
 
     .nav__burger {
       display: none;
+      font-size: 2.2rem;
       cursor: pointer;
+      @media @mobile {
+        display: block;
+        text-align: right;
+      }
+      &:visited {
+        color: white;
+      }
     }
+  }
+}
+
+@media @mobile {
+  .nav--opened .nav__container .nav__list {
+    height: 100vh;
+    opacity: 1;
+    transition: opacity 300ms ease-out;
   }
 }

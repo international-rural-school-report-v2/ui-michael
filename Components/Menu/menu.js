@@ -40,6 +40,8 @@ class BurgerMenu extends Component {
   close(event) {
     this.isOpen = false;
     this.removeModifier('opened');
+    this.menuButton.classList.remove('fa-times');
+    this.menuButton.classList.add('fa-bars');
   }
 }
 

@@ -11,15 +11,16 @@
     background: @primary;
 
     h2 {
-      .font(@page-font, sans-serif; bold; normal; 3rem; @page-color);
+      .font(@menu-font, sans-serif; bold; normal; 3rem; @page-color);
       text-transform: uppercase;
       text-align: center;
     }
 
     p {
       margin: 25px auto 0;
+      text-align: center;
       width: 100%;
-      max-width: 450px;
+      max-width: 475px;
     }
   }
 
@@ -33,6 +34,21 @@
 
     @media @tablet {
       flex-direction: column;
+    }
+
+    ul  {
+      .font(@page-font, sans-serif; bold; normal; 1.6rem; @page-color);
+      list-style-type: square;
+      list-style-position: inside;
+
+      @media @tablet {
+        text-align: center;
+      }
+    }
+
+    li {
+      padding: 5px 0;
+      line-height: 2.6rem;
     }
 
     .about__image {

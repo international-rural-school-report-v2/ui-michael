@@ -11,7 +11,7 @@
   margin-bottom: 75px;
 
   h3 {
-    .font(@page-font, sans-serif; bold; normal; 2rem; @page-color);
+    .font(@page-font, sans-serif; bold; normal; 1.8rem; @page-color);
     margin: 10px auto;
     text-align: center;
     text-transform: uppercase;
@@ -36,6 +36,14 @@
     &:hover {
       color: @hover;
     }
+  }
+
+  h2 {
+    width: 100%;
+    .font(@menu-font, sans-serif; bold; normal; 3rem; @page-color);
+    text-transform: uppercase;
+    text-align: center;
+    padding: 25px;
   }
 
   @media @mobile {

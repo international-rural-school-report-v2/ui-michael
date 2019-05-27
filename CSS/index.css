@@ -150,6 +150,7 @@ table {
 html {
   font-size: 62.5%;
   background: black;
+  scroll-behavior: smooth;
 }
 p {
   color: white;
